@@ -13,10 +13,15 @@ export default createContainer(() => {
     })
   }
 
+  const handleDelete = (note) => {
+    Notes.remove({_id: note._id})
+  }
+
   return {
     handleSubmit: handleCreate,
     placeholder: "New Note",
-    collection: notes
+    collection: notes,
+    handleDelete
   }
 
 }, List)
