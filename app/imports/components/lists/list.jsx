@@ -12,6 +12,11 @@ export const List = (props) =>{
     }
   }
 
+  const listFeatures = {
+    addItem: () => <li className="list-group-item"><SingleFieldSubmit {...props} /></li>,
+    deleteItem: (args) => <span className="pull-right"><DeleteBtn itemToDelete={args} {...props}/></span> 
+  }
+
   return <ul className="list-group">
             <li className="list-group-item"><SingleFieldSubmit {...props} /></li>
         {
